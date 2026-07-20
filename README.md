@@ -70,19 +70,19 @@ git clone https://github.com/nareshkumar0372/Farmer-Assistant.git
 
 ---
 
-## 📸 Screenshots
+## 📸 Application Screenshots
 
-> Add screenshots of your application here.
+| Welcome | Login |
+|---------|-------|
+| ![](screenshots/welcome.png) | ![](screenshots/login.png) |
 
-Example:
+| Dashboard | Sell Product |
+|-----------|--------------|
+| ![](screenshots/dashboard.png) | ![](screenshots/sell_product.png) |
 
-- Welcome Screen
-- Login Screen
-- Farmer Dashboard
-- Sell Product
-- Market Price
-- Orders
-- Google Maps Navigation
+| Market Price | Orders |
+|--------------|--------|
+| ![](screenshots/market_price.png) | ![](screenshots/orders.png) |
 
 ---
 
