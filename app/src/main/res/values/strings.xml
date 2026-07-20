@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">FarmerAssistant</string>
+    <string name="back">Back</string>
+    <string name="farm_products"> Farm Products</string>
+    <string name="filter_category">Filter By Category</string>
+    <string name="vegetable">Vegetable</string>
+    <string name="fruit">Fruit</string>
+    <string name="cereals">Cereals</string>
+    <string name="product_details">Product Details</string>
+    <string name="order_now">🛍 Order Now</string>
+    <string name="speak_desc">Speak product details</string>
+    <string name="back_desc">Go Back</string>
+    <string name="my_products">My Products</string>
+</resources>

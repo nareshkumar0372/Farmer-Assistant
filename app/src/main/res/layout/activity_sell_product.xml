@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F1F8E9"
+    android:fitsSystemWindows="true">
+
+    <!-- TOP HEADER -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="#2E7D32"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="12dp">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:background="@drawable/bg_back_button"
+            android:padding="10dp"
+            android:src="@android:drawable/ic_media_previous"
+            android:scaleType="centerInside"
+            android:contentDescription="Back"/>
+
+        <TextView
+            android:text="Sell Product"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:layout_marginStart="18dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <!-- SCROLL CONTENT -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Product Name + Mic -->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/etProductName"
+                    android:hint="Product Name"
+                    android:textColor="#212121"
+                    android:textColorHint="#757575"
+                    android:background="@drawable/bg_edittext"
+                    android:padding="14dp"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"/>
+
+                <ImageButton
+                    android:id="@+id/btnMic"
+                    android:src="@android:drawable/ic_btn_speak_now"
+                    android:background="@drawable/bg_mic"
+                    android:layout_marginStart="8dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"/>
+            </LinearLayout>
+
+            <!-- Quantity -->
+            <EditText
+                android:id="@+id/etQuantity"
+                android:hint="Quantity (kg)"
+                android:inputType="number"
+                android:textColor="#212121"
+                android:textColorHint="#757575"
+                android:background="@drawable/bg_edittext"
+                android:padding="14dp"
+                android:layout_marginBottom="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+
+            <!-- Price -->
+            <EditText
+                android:id="@+id/etPrice"
+                android:hint="Price per kg"
+                android:inputType="numberDecimal"
+                android:textColor="#212121"
+                android:textColorHint="#757575"
+                android:background="@drawable/bg_edittext"
+                android:padding="14dp"
+                android:layout_marginBottom="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+
+            <!-- Category -->
+            <TextView
+                android:text="Select Category"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#1B5E20"
+                android:layout_marginBottom="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <RadioGroup
+                android:id="@+id/radioCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="20dp">
+
+                <RadioButton
+                    android:id="@+id/rbVegetable"
+                    android:text="Vegetable"
+                    android:textColor="#1B5E20"
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <RadioButton
+                    android:id="@+id/rbFruit"
+                    android:text="Fruit"
+                    android:textColor="#1B5E20"
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <RadioButton
+                    android:id="@+id/rbCereals"
+                    android:text="Cereals"
+                    android:textColor="#1B5E20"
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </RadioGroup>
+
+            <!-- Options: Organic, Bulk, Home Delivery -->
+            <TextView
+                android:text="Options"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#1B5E20"
+                android:layout_marginBottom="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <CheckBox
+                android:id="@+id/chkOrganic"
+                android:text="Organic (+15%)"
+                android:textColor="#1B5E20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <CheckBox
+                android:id="@+id/chkBulk"
+                android:text="Bulk Order Discount (>=50kg, -5%)"
+                android:textColor="#1B5E20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <CheckBox
+                android:id="@+id/chkHomeDelivery"
+                android:text="Home Delivery (+₹50)"
+                android:textColor="#1B5E20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"/>
+
+            <!-- Camera -->
+            <Button
+                android:id="@+id/btnCamera"
+                android:text="📷 Capture Product Image"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/bg_primary_button"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginBottom="14dp"/>
+
+            <ImageView
+                android:id="@+id/imgProduct"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:background="@drawable/bg_image"
+                android:scaleType="centerCrop"
+                android:layout_marginBottom="20dp"/>
+
+            <!-- Save -->
+            <Button
+                android:id="@+id/btnSubmit"
+                android:text="Save Product"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/bg_primary_button"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

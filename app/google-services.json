@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "979086772929",
+    "project_id": "formarassistant",
+    "storage_bucket": "formarassistant.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:979086772929:android:8548e6585cdf1c84bbe240",
+        "android_client_info": {
+          "package_name": "com.example.farmerassistant"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB06llejm3BYtpBPUiPLguFNxqWQyXQmO0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

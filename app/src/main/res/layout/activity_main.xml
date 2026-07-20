@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F1F8E9"
+    android:paddingTop="70dp"
+    android:paddingBottom="20dp"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp">
+
+    <!-- HEADER -->
+
+    <!-- CONTENT (takes remaining space) -->
+
+    <!-- LOGOUT (BOTTOM FIXED SPACE) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/bg_dashboard_header"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="14dp">
+
+        <ImageView
+            android:id="@+id/imgFarmerIcon"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginBottom="6dp"
+            android:src="@drawable/ic_farmer1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Farmer Dashboard"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Manage products, prices, orders"
+            android:textColor="#EAF7EA"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="397dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <!-- MENU CARD -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/bg_dashboard_card"
+            android:orientation="vertical"
+            android:padding="30dp">
+
+            <Button
+                android:id="@+id/btnSell"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginVertical="4dp"
+                android:backgroundTint="#2E7D32"
+                android:text="🌱 SELL PRODUCT"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnMarketPrice"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginVertical="4dp"
+                android:backgroundTint="#388E3C"
+                android:text="📈 MARKET PRICES"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnMyProducts"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginVertical="4dp"
+                android:backgroundTint="#43A047"
+                android:text="📦 MY PRODUCTS"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnBuyerOrders"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginVertical="4dp"
+                android:backgroundTint="#4CAF50"
+                android:text="🧾 BUYER ORDERED DETAILS"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- SERVICE CARD -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_dashboard_card"
+            android:orientation="vertical"
+            android:padding="30dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Order Reminder Service"
+                android:textColor="#1B5E20"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Open controls in separate screen"
+                android:textColor="#666666"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/btnOrderService"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:backgroundTint="#1565C0"
+                android:text="🔔 ORDER REMINDER SERVICE"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnLogout"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="#C62828"
+        android:text="🚪 LOGOUT"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold" />
+
+</LinearLayout>

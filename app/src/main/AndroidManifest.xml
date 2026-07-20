@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.farmerassistant">
+
+    <!-- Internet / Network -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!-- Location -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <!-- Notifications -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <!-- Camera / Mic -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <!-- Foreground Services -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" />
+
+    <!-- Optional Camera Feature -->
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Farmer Assistant"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+        android:usesCleartextTraffic="true">
+
+        <!-- Launcher Activity -->
+        <activity
+            android:name=".WelcomeActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Other Activities -->
+        <activity android:name=".LoginActivity" android:exported="false" />
+        <activity android:name=".SignupActivity" android:exported="false"/>
+        <activity android:name=".MainActivity" android:exported="false" />
+        <activity android:name=".BuyerDashboardActivity" android:exported="false" />
+        <activity android:name=".BrowseProductsActivity" android:exported="false" />
+        <activity android:name=".SellProductActivity" android:exported="false" />
+        <activity android:name=".MarketPriceActivity" android:exported="false" />
+        <activity android:name=".MyProductsActivity" android:exported="false" />
+        <activity android:name=".OrderServiceActivity" android:exported="false" />
+        <activity android:name=".OrderConfirmActivity" android:exported="false" />
+        <activity android:name=".MyOrdersActivity" android:exported="false" />
+        <activity android:name=".BuyerOrderedDetailsActivity" android:exported="false" />
+        <activity android:name=".MapActivity" android:exported="false" />
+
+        <!-- Services -->
+        <service
+            android:name=".service.MarketPriceService"
+            android:exported="false"
+            android:foregroundServiceType="dataSync" />
+
+        <service
+            android:name=".service.AppMonitorService"
+            android:exported="false"
+            android:foregroundServiceType="dataSync" />
+
+        <service
+            android:name=".service.OrderReminderService"
+            android:enabled="true"
+            android:exported="false"
+            android:foregroundServiceType="dataSync" />
+
+        <!-- Receivers -->
+        <receiver
+            android:name=".receiver.NetworkReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:name=".receiver.ProductAddedReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="PRODUCT_ADDED" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Content Provider -->
+        <provider
+            android:name=".provider.ProductProvider"
+            android:authorities="com.example.farmerassistant.provider"
+            android:exported="true" />
+
+        <!-- File Provider -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.farmerassistant.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+    </application>
+</manifest>
